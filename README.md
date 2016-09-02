@@ -11,12 +11,12 @@ Development/Production environment as well. You benefit from asynchronous IO/com
 persistence just from day one.
 
 The sample project was inspired by a Community Project in Brazil, named [Politikei](http://www.politikei.org/), and its 
-goal is to collect votes prior to the actual ballot in legislative houses. Here we wiil only deal with documents and 
+goal is to collect votes prior to the actual ballot in legislative houses. Here we will only deal with documents and 
 vote counts, leaving other use cases to the original application.
 
 # Running the sample
 
-1. install Lightbend Activator (or SBT)
+1. install Lightbend [Activator](https://www.lightbend.com/activator/download) (or [SBT](http://www.scala-sbt.org/) )
 
 1. clone the code to your machine
 
@@ -45,7 +45,7 @@ Please, pay attention to the port, you message may be slightly different. Now, o
 curl -H "Content-Type: application/json" -X POST -d '{"id":"1","entityId":"cmcwb","docCode":"07-287-1000","docName":"Document One","docAbstract":"Proposition Short Description","issueDate": 1455026400000, "authorId":"mauricio@iservport.com", "authorName":"Maurício Castro", "docType":"P", "docContent":"Actual content", "voters": [] }' http://localhost:26422/api/docs
 ```
 
-And the, read the result:
+And then, read the result:
 
 ```curl
 curl http://localhost:26422/api/docs/1
@@ -68,3 +68,7 @@ Copyright 2016 i-Serv Consultoria Empresarial Ltda.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+# Blog
+
+If you'e interested in Scala, visit our [blog](http://scalacamp.com.br/) (Portuguese).
