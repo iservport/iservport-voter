@@ -17,4 +17,4 @@ sealed trait DocumentEvent extends AggregateEvent[DocumentEvent] with Jsonable {
 case class DocumentCreated(id: String, entityId: String, docCode: String, docName: String, docAbstract: String,
   issueDate: Date, authorId: String, authorName: String, docType: Char, docContent: String) extends DocumentEvent
 
-case class VoteAdded(voterId: String, voterName: String, voted: Int, timestamp: Instant = Instant.now()) extends DocumentEvent
+case class VoteAdded(documentId: String, voterId: String, voterName: String, voted: Int, timestamp: Instant = Instant.now()) extends DocumentEvent

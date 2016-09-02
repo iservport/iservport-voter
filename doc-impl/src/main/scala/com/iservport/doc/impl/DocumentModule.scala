@@ -6,6 +6,6 @@ import com.lightbend.lagom.javadsl.server.ServiceGuiceSupport
 
 class DocumentModule extends AbstractModule with ServiceGuiceSupport {
   override protected def configure(): Unit = {
-    bindServices(serviceBinding(classOf[DocumentService], classOf[DocumentService]))
+    bindServices(serviceBinding(classOf[DocumentService], classOf[DocumentServiceImpl]))
   }
 }
